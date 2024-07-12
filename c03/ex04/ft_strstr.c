@@ -6,11 +6,11 @@
 /*   By: tmidik <tmidik@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 15:29:27 by tmidik            #+#    #+#             */
-/*   Updated: 2024/07/10 15:52:36 by tmidik           ###   ########.fr       */
+/*   Updated: 2024/07/12 22:00:54 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -31,11 +31,4 @@ char	*ft_strstr(char *str, char *to_find)
 		j = 0;
 	}
 	return (0);
-}
-
-int	main()
-{
-	char str[] = "42 1337 Network 2021 piscine Benguerir Khouribga";
-	char find[] = "piscine";
-	printf("%s", ft_strstr(str, find));
 }

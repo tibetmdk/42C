@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmidik <tmidik@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/10 03:04:25 by tmidik            #+#    #+#             */
-/*   Updated: 2024/07/12 22:03:34 by tmidik           ###   ########.fr       */
+/*   Created: 2024/07/12 21:54:01 by tmidik            #+#    #+#             */
+/*   Updated: 2024/07/12 21:59:47 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	j;
-	int	i;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
+	j = 0;
 	while (dest[i] != '\0')
 	{
 		i++;
 	}
-	j = 0;
-	while (src[j] != '\0')
+	while (j < nb && src[j] != '\0')
 	{
-		dest[i] = src[j];
-		i++;
+		dest[i + j] = src [j];
 		j++;
 	}
-	dest[i] = '\0';
+	dest[i + j] = '\0';
 	return (dest);
 }
